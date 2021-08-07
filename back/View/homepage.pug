@@ -1,0 +1,195 @@
+extends base.pug
+block header   
+ .comments 
+  include homepageHeader.pug 
+  .showcase
+   h1.main-heading
+    | CUSTOM WORLD.
+    br
+    | FOR 
+    span.developer
+   .btns
+    a.btn(href='') SHOP NOW
+    a.btn.btn-empty(href='') Show me more
+
+block content 
+ section.features
+  h2
+    | Awesome Features
+  .container-parent
+    .container
+      i.far.fa-calendar-plus.icon
+      h3
+        | 365 DAYS/YEAR
+      p.feature-para
+        | 1 year warrenty for all the builds and other accessories
+    .container
+      i.fas.fa-shipping-fast.icon
+      h3 FREE DELIVERY
+      p.feature-para
+        | Ensure free and safe delivery to all the places in India.
+    .container
+      i.fas.fa-carrot.icon
+      h3 100% GENUINE
+      p.feature-para All products are authentic with lables
+ section.How-to
+  h2 STEPS TO FOLLOW
+  .howto-container
+    img.iphone-img(src='./img/Build.png' alt='iphone-img' srcset='')
+    .steps-container
+      .step-container.clear-fix
+        .step-val 1
+        p.howto-para
+          | Choose the best build that fits your needs and sign up today for all the exciting offer.
+      .step-container.clear-fix
+        .step-val 2
+        p.howto-para Order your build using our website. Or you can even call us!
+      .step-container.clear-fix
+        .step-val 3
+        p.howto-para Enjoy your build and don't forgot to review us!
+ section.comments
+  h2 REVIEWS
+  .comments-parent
+    .container.comments-container
+      img.customer-img(src='/img/customer.jpg' alt='')
+      .comments__name Nikhil Pandey
+      p
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iure odio, quod nisi facilis commodi ut sunt
+        | ipsam, magnam eius repellat perferendis porro, iste voluptas!
+      i.fas.fa-star.small-icon
+      i.fas.fa-star.small-icon
+      i.fas.fa-star.small-icon
+      i.fas.fa-star.small-icon
+      i.fas.fa-star.small-icon
+    .container.comments-container
+      img.customer-img(src='/img/customer.jpg' alt='')
+      .comments__name Nikhil Pandey
+      p
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iure odio, quod nisi facilis commodi ut sunt
+        | ipsam, magnam eius repellat perferendis porro, iste voluptas!
+      i.fas.fa-star.small-icon
+      i.fas.fa-star.small-icon
+      i.fas.fa-star.small-icon
+      i.fas.fa-star.small-icon
+      i.fas.fa-star.small-icon
+    .container.comments-container
+      img.customer-img(src='/img/customer.jpg' alt='')
+      .comments__name Nikhil Pandey
+      p
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iure odio, quod nisi facilis commodi ut sunt
+        | ipsam, magnam eius repellat perferendis porro, iste voluptas!
+      i.fas.fa-star.small-icon
+      i.fas.fa-star.small-icon
+      i.fas.fa-star.small-icon
+      i.fas.fa-star.small-icon
+      i.fas.fa-star.small-icon
+ section.signup
+  h2 START MAKING YOUR BUILD TODAY
+  .signup-parent
+    .signup-child
+      .signup-header
+        h3 PREMIUM
+        .signup-pricing
+          span.pricing Rs 50000
+          | /builds
+          p All the low level rigs
+      .signup-features
+        ul
+          li
+            i.fas.fa-check.small-icon  
+            | Latest rigs
+          li
+            i.fas.fa-check.small-icon  
+            | Order 24/7
+          li
+            i.fas.fa-check.small-icon  
+            | Access to newest creations
+          li
+            i.fas.fa-check.small-icon  
+            | Free delivery
+        .signup-button
+          a.btn.btn-full(href='#') I like this
+    .signup-child.active
+      .signup-header
+        h3 PREMIUM
+        .signup-pricing
+          span.pricing Rs 75000
+          | /builds
+          p All the medium range rigs
+      .signup-features
+        ul
+          li
+            i.fas.fa-check.small-icon  
+            | Latest rigs
+          li
+            i.fas.fa-check.small-icon  
+            | Order 24/7
+          li
+            i.fas.fa-check.small-icon  
+            | Access to newest creations
+          li
+            i.fas.fa-check.small-icon  
+            | Free delivery
+        .signup-button
+          a.btn.btn-full(href='#') I like this
+    .signup-child
+      .signup-header
+        h3 PREMIUM
+        .signup-pricing
+          span.pricing Rs 100000
+          | /builds
+          p All the high end rigs!
+      .signup-features
+        ul
+          li
+            i.fas.fa-check.small-icon  
+            | Latest rigs
+          li
+            i.fas.fa-check.small-icon  
+            | Order 24/7
+          li
+            i.fas.fa-check.small-icon  
+            | Access to newest creations
+          li
+            i.fas.fa-check.small-icon  
+            | Free delivery
+        .signup-button
+          a.btn.btn-full(href='#') I like this
+ section.Input.fadeInUp
+  h2 CONTACT US
+  .container__parent
+    //
+      <video class="bg-video__content" autoplay muted loop>
+      <source src="" type="video/mp4" />
+    img.combo(src='./img/Combo.png' alt='' srcset='')
+    // Your browser is not supported
+    form
+      .entry
+        .entry-text
+          | Name
+        input(type='text' name='Name' placeholder='Your Name' required='')
+      .entry
+        .entry-text
+          | Email
+        input(type='email' name='email' placeholder='Your Email')
+      .entry
+        .entry-text
+          | How did you find us
+        select(name='' id='')
+          option(value='')
+            | friends
+          option(value='') search
+          option(value='') advertsiment
+          option(value='') other
+      .entry
+        .entry-text
+          | Drop us a line
+        textarea(name='' id='' placeholder='Your Message')
+      .entry
+        input.checkbox(type='checkbox' name='email')
+        span.checkbox-conditions
+          | I have read and agree with all the Privacy Policy and
+          | Terms Conditions
+      .btn-parent
+        a.btn.btn-full.form-button(href='#') SEND MESSAGE
+

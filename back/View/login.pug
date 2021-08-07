@@ -1,0 +1,22 @@
+extends base
+block content
+  .othernav
+  .container-grey
+    .form-container
+      form.login.form-page
+        h3.heading-secondary LOGIN
+        .entry
+          .entry-text Email
+          input#email(type='email' placeholder="youremail@gmail.com").email
+        .entry
+          .entry-text Password
+          input#pw(type='password' placeholder="*********").password
+          span#message 
+        .entry
+          .btn-parent.left
+            button(type="submit").btn.btn-full.form-button.loginBtn LOGIN
+        .form-links__group
+          a(href="/signup").form-links Signup 
+          a(href="/forgetPassword").form-links Forget Password
+append scripts 
+ script(src="./login.js")

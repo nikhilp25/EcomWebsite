@@ -1,0 +1,17 @@
+.navlinks
+    ul.navigation
+        li.nav-line
+            a.white-anchors(href='/features') FEATURES
+        li.nav-line
+            a.white-anchors(href='/products') PRODUCTS
+        li.nav-line
+            a.white-anchors(href='/review') REVIEWS
+        if name
+          li.nav-line #{name}
+          li.nav-line
+            a.white-anchors(href='/logout') LOGOUT
+        else
+          li.nav-line
+            a.white-anchors(href='/login') LOGIN
+          
+            
