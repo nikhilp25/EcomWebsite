@@ -5,18 +5,19 @@ const nodemailer=require("nodemailer");
 async function sendEmail(){
               try{
                             var transporter = nodemailer.createTransport({
-                                          host: "smtp.mailtrap.io",
-                                          port: 2525,
+                                          service:"gmail",  
+                                          host: "smtp.gmail.com",
+                                          secure:true,
                                           auth: {
-                                            user: "51c7c5b7657b17",
-                                            pass: "656134a820ed37"
+                                            user: "pandey.nikhil086@gmail.com",
+                                            pass: "cifxxkyuhoeimegm"
                                           }
                                         });
                             await transporter.sendMail({
-                                          from: 'pandey.nikhil086@gmail.com', // sender address
-                                          to: "abc@test.com", // list of receivers
-                                          subject: "Hello ✔", // Subject line
-                                          text: "Hello this is testing", // plain text body
+                                          from: "pandey.nikhil086@gmail.com", // sender address
+                                          to: "pandeyseema894@gmail.com", // list of receivers
+                                          subject: "Hello ✔ mummy", // Subject line
+                                          text: "Hello mummy", // plain text body
                                           html: "<b>Hello world?</b>", // html body
                                         });
               }

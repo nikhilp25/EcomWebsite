@@ -21,7 +21,7 @@ loginBtn.addEventListener("click",async function(e){
 
               }
               catch(error){
-                            conole.log(error);
+                            console.log(error);
               }
               
               

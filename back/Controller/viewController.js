@@ -4,9 +4,16 @@ const productModel = require("../Model/product");
 // {
 //               res.render("base.pug");
 // }
-function getHomePage(req,res)
+async function getHomePage(req,res)
 {             
-              res.render("homepage.pug",{name:req.name});
+              try{
+                            let product=await productModel.find();
+                            product=product.splice(0,3);
+                            res.render("homepage.pug",{name:req.name, product});
+              }
+              catch(error){
+                            console.log(error);
+              }
 }
 function getLoginPage(req,res)
 {

@@ -84,77 +84,9 @@ block content
       i.fas.fa-star.small-icon
       i.fas.fa-star.small-icon
  section.signup
-  h2 START MAKING YOUR BUILD TODAY
   .signup-parent
-    .signup-child
-      .signup-header
-        h3 PREMIUM
-        .signup-pricing
-          span.pricing Rs 50000
-          | /builds
-          p All the low level rigs
-      .signup-features
-        ul
-          li
-            i.fas.fa-check.small-icon  
-            | Latest rigs
-          li
-            i.fas.fa-check.small-icon  
-            | Order 24/7
-          li
-            i.fas.fa-check.small-icon  
-            | Access to newest creations
-          li
-            i.fas.fa-check.small-icon  
-            | Free delivery
-        .signup-button
-          a.btn.btn-full(href='#') I like this
-    .signup-child.active
-      .signup-header
-        h3 PREMIUM
-        .signup-pricing
-          span.pricing Rs 75000
-          | /builds
-          p All the medium range rigs
-      .signup-features
-        ul
-          li
-            i.fas.fa-check.small-icon  
-            | Latest rigs
-          li
-            i.fas.fa-check.small-icon  
-            | Order 24/7
-          li
-            i.fas.fa-check.small-icon  
-            | Access to newest creations
-          li
-            i.fas.fa-check.small-icon  
-            | Free delivery
-        .signup-button
-          a.btn.btn-full(href='#') I like this
-    .signup-child
-      .signup-header
-        h3 PREMIUM
-        .signup-pricing
-          span.pricing Rs 100000
-          | /builds
-          p All the high end rigs!
-      .signup-features
-        ul
-          li
-            i.fas.fa-check.small-icon  
-            | Latest rigs
-          li
-            i.fas.fa-check.small-icon  
-            | Order 24/7
-          li
-            i.fas.fa-check.small-icon  
-            | Access to newest creations
-          li
-            i.fas.fa-check.small-icon  
-            | Free delivery
-        .signup-button
-          a.btn.btn-full(href='#') I like this
+    each prod in product
+     include productCard.pug
  section.Input.fadeInUp
   h2 CONTACT US
   .container__parent
