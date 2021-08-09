@@ -23,6 +23,9 @@ function getSignUpPage(req,res)
 {
               res.render("signup.pug",{name:req.name});
 }
+function getResetPasswordPage(req,res){
+              res.render("resetPassword.pug",{name:req.name});
+}
 async function getProductPage(req,res)
 {
               try{
@@ -40,4 +43,4 @@ module.exports.getHomePage=getHomePage;
 module.exports.getLoginPage=getLoginPage;
 module.exports.getSignUpPage=getSignUpPage;
 module.exports.getProductPage=getProductPage;
-
+module.exports.getResetPasswordPage=getResetPasswordPage;

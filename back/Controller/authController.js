@@ -1,7 +1,32 @@
 const userModel = require("../Model/user");
 const jwt=require("jsonwebtoken");
-const { SECRET_KEY } = require("../secrets/secrets");
+const { SECRET_KEY, GMAIL_ID, GMAIL_PW } = require("../secrets/secrets");
+const nodemailer=require("nodemailer");
 
+async function sendEmail(message){
+              try{
+                            var transporter = nodemailer.createTransport({
+                                          service:"gmail",  
+                                          host: "smtp.gmail.com",
+                                          secure:true,
+                                          auth: {
+                                            user: GMAIL_ID,
+                                            pass: GMAIL_PW
+                                          }
+                                        });
+                            let res=await transporter.sendMail({
+                                          from: message.from, // sender address
+                                          to: message.to, // list of receivers
+                                          subject: message.subject, // Subject line
+                                          text: message.text, // plain text body
+                                          // html: "<b>Hello world?</b>", // html body
+                                        });
+                                    return res;
+              }
+              catch(error){
+                            return error;
+              }
+}
 
 
 
@@ -183,10 +208,18 @@ async function forgetPassword(req,res){
                                           let token=user.createResetToken();
                                           console.log(token);
                                           await user.save({validateBeforeSave:false});
-                                          let resetLink=`http://localhost:3000/api/user/resetpassword/${token}`;
+                                          let resetLink=`http://localhost:3000/resetpassword/${token}`;
+                                          let message={
+                                                from:"pandey.nikhil086@gmail.com",
+                                                to:email,
+                                                subject:"Reset Password",
+                                                text:resetLink,
+                                          }
+                                          let response=sendEmail(message)
                                           res.json({
                                                         message:"Reset Link is sent to mail",
-                                                        resetLink,
+                                                      //   resetLink,
+                                                      response
                                           })
                             }
                             else{
