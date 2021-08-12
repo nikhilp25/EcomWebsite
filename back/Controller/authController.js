@@ -121,6 +121,7 @@ async function isLoggedIn(req,res,next){
             {
                   let user= await userModel.findById(payload.id);
                   req.name=user.name;
+                  req.user=user;
                   next();
 
             }

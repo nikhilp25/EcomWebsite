@@ -15,10 +15,13 @@ async function getHomePage(req,res)
                             console.log(error);
               }
 }
+function getProfilePage(req,res){
+              res.render("profilePage.pug",{user:req.user});
+}
 function getLoginPage(req,res)
 {
               res.render("login.pug",{name:req.name});
-}
+} 
 function getSignUpPage(req,res)
 {
               res.render("signup.pug",{name:req.name});
@@ -44,3 +47,4 @@ module.exports.getLoginPage=getLoginPage;
 module.exports.getSignUpPage=getSignUpPage;
 module.exports.getProductPage=getProductPage;
 module.exports.getResetPasswordPage=getResetPasswordPage;
+module.exports.getProfilePage=getProfilePage;

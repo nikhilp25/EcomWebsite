@@ -1,0 +1,24 @@
+extend base
+block  content
+    h2 User Page
+     .user-container
+        .entry
+          p Name :#{user.name}
+        .entry  
+          p Email:#{user.email}
+        .entry  
+          p Image 
+            img(src=`${user.profileImage}`, alt="", srcset="")
+            input(type="file", name="photo").profileImage
+        .entry  
+          p 
+            a(herf="/") Settings
+          
+          if user.role=="admin"
+            p 
+              a(href="/managePlans" ) Manage Plans
+            p 
+              a(href="/manageUser") Manage User
+append scripts 
+ script(src="./profileImg.js")            
+              
