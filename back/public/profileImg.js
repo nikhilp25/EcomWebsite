@@ -8,5 +8,9 @@ profileImage.addEventListener("change",async function(e){
               formData.append("user",file);
               let obj=await axios.patch("http://localhost:3000/api/user/updateProfilePhoto",formData);
               console.log(obj);
+              if(obj.data.message)
+              {
+                            window.location.reload();
+              }
 
 })

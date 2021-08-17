@@ -5,10 +5,10 @@ const express=require("express");
 const buildRouter=require("./Router/buildRouter");
 const userRouter=require("./Router/userRouter");
 const viewRouter=require("./Router/viewRouter");
+const bookingRouter=require("./Router/bookingRouter");
 const app=express();
 const path=require("path");
-const cookieParser=require("cookie-parser")
-
+const cookieParser=require("cookie-parser");
 
 app.use(express.json());
 app.use(cookieParser());
@@ -64,7 +64,7 @@ app.set("views",path.join(__dirname,"View"));
 
 
 
-
+app.use("/api/booking",bookingRouter)
 
 //methods for user file
 app.use("/api/build",buildRouter);
